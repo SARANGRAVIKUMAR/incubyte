@@ -10,3 +10,8 @@ test("Return that number if its a single number ",()=>{
 test("Return the sum if there are multiple numbers in that string", ()=>{
     expect(stringCalculator("1,2")).toBe(3);
 })
+
+
+test("Return the sum of each new line seperated strings", ()=>{
+    expect(stringCalculator("1\n2,2")).toBe(5);
+})
