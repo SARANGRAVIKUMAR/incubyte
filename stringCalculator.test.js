@@ -15,3 +15,6 @@ test("Return the sum if there are multiple numbers in that string", ()=>{
 test("Return the sum of each new line seperated strings", ()=>{
     expect(stringCalculator("1\n2,2")).toBe(5);
 })
+test("Return the sum  of numbers with custom delimiter", ()=>{
+    expect(stringCalculator("//;\n1\n3;2\n4")).toBe(10)
+})
