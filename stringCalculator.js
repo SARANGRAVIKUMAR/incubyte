@@ -8,7 +8,10 @@ function stringCalculator(string){
     }else[
         string = string.replace(/\n/g, ",")
     ]    
-    return string.split(defaultDelimiter).reduce((sum, currentValue) => sum + parseInt(currentValue), 0);
+    return string.split(defaultDelimiter).reduce((sum, currentValue) =>{
+        if(parseInt(currentValue)<0) throw new Error(`Negatives not allowed:${currentValue}`)
+        return sum + parseInt(currentValue)
+    },0) 
 
 }
 module.exports = stringCalculator;

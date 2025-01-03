@@ -18,3 +18,7 @@ test("Return the sum of each new line seperated strings", ()=>{
 test("Return the sum  of numbers with custom delimiter", ()=>{
     expect(stringCalculator("//;\n1\n3;2\n4")).toBe(10)
 })
+
+test("Return an error if there is a negative number in the string", () => {
+    expect(() => stringCalculator("//;\n1\n3;2\n-2")).toThrow("Negatives not allowed:-2");
+});
